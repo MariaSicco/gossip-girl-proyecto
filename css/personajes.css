@@ -1,0 +1,527 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', serif;
+    background-color: #1a1a1a;
+    color: #fff;
+}
+
+/* Estilos del encabezado */
+header {
+    background-color: #111;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 36px;
+    font-family: 'Georgia', serif;
+    color: #d4af37;
+}
+
+header ul {
+    display: flex;
+    list-style: none;
+}
+
+header ul li {
+    margin-left: 20px;
+}
+
+header ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+/* Banner principal */
+.banner {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.banner img {
+    width: 100%;
+    height: auto;
+}
+
+.banner-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.banner-text h2 {
+    font-size: 48px;
+    color: #d4af37;
+}
+
+.button {
+    background-color: #d4af37;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #000;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+/*-------------------------------------------------------------------------------------------- */
+/* Contenedor principal del carrusel */
+.carousel-container {
+    position: relative;
+    max-width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    height: 700px; 
+}
+
+/* Texto que aparece solo en hover */
+.carousel-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #f8e7b9;
+    text-align: center;
+    font-family: "Marcellus SC", serif;
+    font-size: 22px;
+    letter-spacing: 1px;
+    z-index: 2;
+    opacity: 0; 
+    transition: opacity 0.3s ease; 
+}
+
+/* Muestra el texto solo cuando el cursor está sobre el carrusel */
+.carousel-container:hover .carousel-text {
+    opacity: 1;
+}
+
+/* Contenedor del carrusel con varias imágenes */
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 600%;
+    height: 100%; 
+}
+
+/* Estilo de las imágenes del carrusel */
+.image-hover-container {
+    position: relative;
+    flex: 0 0 100%; 
+    height: 100%;
+    object-fit: cover;
+    margin: 0;
+    overflow: hidden;
+}
+
+.main-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 0.5s ease;
+}
+
+/* Fondo oscuro semitransparente detrás del texto */
+.image-hover-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+}
+
+.carousel-container:hover .main-image {
+    transform: scale(1.05); 
+}
+
+
+
+
+
+
+
+
+
+/* Contenedor principal del carrusel */
+.carousel-container {
+    position: relative;
+    max-width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    height: 780px; 
+}
+
+/* Texto que aparece solo en hover */
+.carousel-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #f8e7b9;
+    text-align: center;
+    font-family: "Marcellus SC", serif;
+    font-size: 22px;
+    letter-spacing: 1px;
+    z-index: 2;
+    opacity: 0;
+    transition: opacity 0.3s ease; 
+}
+
+
+.carousel-container:hover .carousel-text {
+    opacity: 1;
+}
+
+
+.carousel {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Estilo de las imágenes del carrusel */
+.slides {
+    display: flex;
+    width: calc(100% * 4); 
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    flex: 0 0 100%; 
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Imagenes del carrusel */
+.carruselFoto {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    transition: transform 0.5s ease; 
+}
+.fotoP {
+    cursor: pointer;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.fotoP:hover {
+    transform: scale(1.1); 
+}
+
+/* Fondo oscuro semitransparente detrás del texto */
+.slide::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* Efecto hover para mostrar el texto */
+.carousel-container:hover .slide::before {
+    opacity: 1; 
+}
+
+
+.btn-characters {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #d1aa5b;
+    color: #1a1a1a;
+    text-decoration: none;
+    font-family: "Marcellus SC", serif;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Efecto hover en el botón */
+.btn-characters:hover {
+    background-color: #f8e7b9;
+    transform: scale(1.05);
+}
+
+
+.circle-container {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid #d1aa5b;
+}
+
+.portal img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Modal de la descripción del personaje */
+.descripcion-modal {
+    display: none; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); 
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Contenido del modal */
+.modal-content {
+    position: relative;
+    background-color: #1c1c1c;
+    padding: 20px;
+    border-radius: 10px;
+    width:40%;
+    height: 90%;
+
+    color: #f8e7b9;
+    font-family: "Marcellus SC", serif;
+    text-align: left;
+    overflow-y: auto;
+}
+
+/* Botón de cierre */
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: #f8e7b9;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.close-button:hover {
+    color: #ffffff;
+}
+
+/* Estilo general para la información del personaje */
+.portable-infobox {
+    border: 1px solid #d1aa5b;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 15px;
+    border-radius: 8px;
+    color: #f8e7b9;
+    max-width: 100%; 
+    max-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+}
+
+.portable-infobox img {
+    width: 100%;
+    height: 100%;
+}
+
+.pi-item {
+    margin: 10px 0;
+}
+
+.pi-title {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.pi-data-label {
+    font-weight: bold;
+}
+
+.pi-data-value {
+    margin-left: 10px;
+    font-family: "Marcellus", serif;
+}
+
+.pi-header {
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+body.modal-open {
+    overflow: hidden;
+}
+
+
+
+
+
+.carousel-personaje {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.carousel-personaje img {
+    width: 100%;
+    height: 300px;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+.carousel-controls {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.carousel-controls button {
+    background-color: #1c1c1c;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.carousel-controls button:hover {
+    background-color: #444;
+}
+
+/*-------------------------------------------------------------------------------------------- */
+/* Estilos generales */
+.personajesP {
+    width: 93%;
+    margin: 20px auto;
+    display: flex;
+}
+
+
+
+.title {
+    font-family: 'Helvetica Neue LT Std';
+    color: #EBB255;
+    font-size: 45px;
+    font-weight: bold;
+    margin-left: 20px;
+}
+
+.subtitle {
+    font-family: 'Raleway';
+    color: white;
+    font-style: italic;
+    margin-left: 20px;
+    font-size: 18px;
+}
+
+/* Grid de personajes */
+.grid-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+/* Estilo de cada personaje */
+.fotoP {
+    text-align: center;
+    width: 23%;
+}
+
+.circle-container {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 5px;
+    background-color: #EBB255; 
+}
+
+.portal {
+    width: 100px;
+    height: 100px;
+}
+
+.portal img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.name {
+    margin-top: 5px;
+    line-height: 15px;
+    font-family: 'Helvetica Neue LT Std';
+    font-weight: bold;
+    color: #EBB255;
+}
+.header-content {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    text-align: center; 
+    padding: 20px;
+    background-color: #1a1a1a; 
+    border-radius: 10px; 
+}
+
+.besoF{
+    width: 70%;
+}
+.header-image {
+    width: 70%; 
+    max-width: 300px; 
+    margin-bottom: 20px; 
+}
+
+.title {
+    font-family: 'Helvetica Neue LT Std';
+    font-size: 36px;
+    font-weight: bold;
+    color: #EBB255; 
+    margin-bottom: 10px; 
+}
+
+.subtitle {
+    font-family: 'Raleway', sans-serif;
+    font-size: 18px;
+    font-style: italic;
+    color: #ffffff; 
+}
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+    .fotoP {
+        width: 45%;
+    }
+}
+
+@media (max-width: 480px) {
+    .fotoP {
+        width: 100%;
+    }
+}

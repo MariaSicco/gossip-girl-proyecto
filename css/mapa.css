@@ -1,0 +1,42 @@
+/* Estilos generales */
+body {
+    font-family: 'Marcellus SC', serif;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+h2 {
+    margin-top: 50px;
+        font-size: 24px;
+        text-transform: uppercase;
+        color: #f9e4b7;
+        font-weight: 400;
+        margin-bottom: 50px;
+        text-align: center;
+
+}
+
+/* Estilos para el mapa */
+#map {
+    height: 600px; 
+    width: 80%;  
+    margin: 0 auto;
+    border-radius: 10px;
+    margin-bottom: 40px;
+}
+
+/* Personalización de los popups */
+.leaflet-popup-content {
+    font-family: 'Raleway', sans-serif;
+    color: #333;
+    font-size: 16px;
+}
+
+.leaflet-popup-content-wrapper {
+    background-color: #f9e4b7;
+    border-radius: 10px;
+    padding: 10px;
+}

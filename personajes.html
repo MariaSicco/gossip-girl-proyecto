@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PERSONAJES</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Marcellus+SC&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Marcellus&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css?v=1.0"> <!-- Ruta corregida -->
+    <link rel="stylesheet" href="css/personajes.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-logo">
+            <h1 id="ban1">gossip <br>girl</h1>
+            <img id="xoban" src="img/ban1.png" alt=""> 
+        </div>
+        <nav class="nav-menu">
+            <ul id="nav-menu">
+                <li class="menuli"><a href="index.php">INICIO</a></li> <!-- Ruta corregida -->
+                <li class="menuli"><a href="personajes.html">PERSONAJES</a></li> <!-- Ruta corregida -->
+                <li class="menuli"><a href="episodios.html">EPISODIOS</a></li> <!-- Ruta corregida -->
+                <li class="menuli"><a href="galeria.html">GALERÍA</a></li> <!-- Ruta corregida -->
+                <li class="menuli"><a href="mapa.html">MAPA</a></li>
+            </ul>
+        </nav>
+        <div class="loginB">
+           
+        </div>
+        
+        <script>
+        fetch('./session-status.php')
+            .then(response => response.text())
+            .then(status => {
+                const loginDiv = document.querySelector('.loginB');
+                if (status.trim() === "true") {
+                    // Usuario autenticado: Mostrar botón de cerrar sesión
+                    loginDiv.innerHTML = `
+                    <a href="salir.php" id="icon-button">
+                        <span class="login"> CERRAR SESIÓN</span>
+                    <i class="fas fa-user button-icon"></i>
+                </a>
+                    `;
+                } else {
+                    // Usuario no autenticado: Mostrar botón de iniciar sesión
+                    loginDiv.innerHTML = `
+                        <a href="login.html" id="icon-button">
+                            <span class="login">INICIA SESIÓN</span>
+                            <i class="fas fa-user button-icon"></i>
+                        </a>
+                    `;
+                }
+            });
+        </script>
+        
+    </header>
+    <div class="double-line"></div>
+   
+   <!-- Carrusel -->
+    <div class="carousel-container">
+        <div class="carousel">
+            <div class="slides">
+        
+                <div class="carousel-text">
+                    <p>Descubre los personajes icónicos de Gossip Girl y su impactante influencia en el Upper East Side.</p>
+                    
+                    <a href="#personajes-principales" class="btn-characters">VER MÁS</a>
+                </div>
+            <div class="slide"><img class="carruselFoto" src="img/gossip-girl-spotlight-10-17.jpg.webp" alt="Imagen 1"></div> <!-- Ruta corregida -->
+                    <div class="slide"><img class="carruselFoto" src="img/el-ranking-definitivo-de-los-romances-de-gossip-girl.jpg" alt="Imagen 2"></div> <!-- Ruta corregida -->
+                    <div class="slide"><img class="carruselFoto" src="img/GossipGirl1.jpg" alt="Imagen 3"></div> <!-- Ruta corregida -->
+                    <div class="slide"><img class="carruselFoto" src="img/107351-h1.jpg" alt="Imagen 4"></div> <!-- Ruta corregida -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+   
+    <!-- Sección de Personajes Principales -->
+    <div id="personajes-principales" class="contenido">
+        <h2>Personajes Principales</h2>
+    </div>
+    <div class="cont">
+        <div class="linea-dorada"></div>
+    </div>
+    
+    <div class="personajesP">
+        <div class="header-content">
+            <img class="besoF"  src="img/beso.png" alt="">
+            <div class="title">cast</div>
+            <div class="subtitle">Take a glance at the true originals who paved the way.</div>
+        </div>
+    
+        <div class="grid-container">
+            <div class="fotoP" onclick="mostrarDescripcion('serena')">
+                <div class="circle-container">
+                    <div class="portal"><img src="img/292be5a8e3187d77d442ad483f2fc844.jpeg" alt="Serena"></div>
+                </div>
+                <div class="name">serena</div>
+            </div>
+    
+            <div class="fotoP"onclick="mostrarDescripcion('blair')">
+                <div class="circle-container">
+                    <div class="portal"><img src="img//images-3.jpeg" alt="Blair"></div>
+                </div>
+                <div class="name">blair</div>
+            </div>
+    
+            <div class="fotoP" onclick="mostrarDescripcion('dan')">
+                <div class="circle-container">
+                    <div class="portal"><img src="img/xoxo-con-quien-se-ha-casado-dan-humphrey.png" alt="Dan"></div>
+                </div>
+                <div class="name">dan</div>
+            </div>
+    
+            <div class="fotoP" onclick="mostrarDescripcion('nate')">
+                <div class="circle-container">
+                    <div class="portal"><img src="img/Nate_Archibald.webp" alt="Nate"></div>
+                </div>
+                <div class="name">nate</div>
+            </div>
+    
+            <div class="fotoP" onclick="mostrarDescripcion('chuck')">
+                <div class="circle-container">
+                    <div class="portal"><img src="img/48961d5d-329c-4976-8675-6229dae84db3_alta-aspect-ratio_default_0.jpg" alt="Chuck"></div>
+                </div>
+                <div class="name">chuck</div>
+            </div>
+    
+            <div class="fotoP" onclick="mostrarDescripcion('jenny')">
+                <div class="circle-container">
+                    <div class="portal"><img src="img/every-hair-jenny-hamphrey-ever-had-on-gossip-girl-v0-894luuh34u4b1.jpg.webp" alt="jenny"></div>
+                </div>
+                <div class="name">jenny</div>
+            </div>
+    
+            <div class="fotoP" onclick="mostrarDescripcion('rufus')">
+                <div class="circle-container">
+                    <div class="portal"><img src="img/46655b8d0814c560e197cd611e2e33c8.jpg" alt="rufus"></div>
+                </div>
+                <div class="name">rufus</div>
+            </div>
+    
+            <div class="fotoP" onclick="mostrarDescripcion('lily')">
+                <div class="circle-container">
+                    <div class="portal"><img src="img/d5800f8ad03863fdbe3a430e91feb91d.jpg" alt="Dan"></div>
+                </div>
+                <div class="name">lily</div>
+            </div>
+    
+        
+        </div>
+    </div>
+    <div id="descripcion-modal" class="descripcion-modal">
+        <div class="modal-content" id="modal-content">
+            <span class="close-button" onclick="cerrarModal()">×</span>
+            <!-- Este será llenado dinámicamente con JavaScript -->
+            <div id="descripcion-content"></div>
+        </div>
+    </div>
+    
+    <div class="cont">
+        <div class="linea-dorada"></div>
+    </div>
+    <div class="contenido">
+        <h2> Personajes Secundarios </h2>
+    </div>
+    <div class="cont">
+        <div class="linea-dorada"></div>
+    </div>
+    <div class="personajesP">
+        <div class="grid-container">
+            <div class="fotoP" onclick="mostrarDescripcion('eric')" >
+                <div class="circle-container">
+                    <div class="portal"><img src="img/53pXsQPfs3TkYIi8QOP01MZUy6EN7gMgMgp5wS1mY00osykRwEzfA4eO6aZ6KtCRSqxCkLBpQL7goFKvB6D1ww.webp" alt="eric"></div>
+                </div>
+                <div class="name">eric</div>
+            </div>
+    
+            <div class="fotoP" onclick="mostrarDescripcion('vanesa')" >
+                <div class="circle-container">
+                    <div class="portal"><img src="img/tmp-name-2-5907-1643228732-1_dblbig.jpg" alt="vanesa"></div>
+                </div>
+                <div class="name">vanesa</div>
+            </div>
+    
+            <div class="fotoP" onclick="mostrarDescripcion('georgina')" >
+                <div class="circle-container">
+                    <div class="portal"><img src="img/39be28b30237ef591d3199ae460de8f6.jpg" alt="georgina"></div>
+                </div>
+                <div class="name">georgina</div>
+            </div>
+    
+            <div class="fotoP" onclick="mostrarDescripcion('bart')" >
+                <div class="circle-container">
+                    <div class="portal"><img src="img/0faf9d13-b7cf-43b0-b080-5a12d2df0496.jpg" alt="bart"></div>
+                </div>
+                <div class="name">bart</div>
+            </div>
+    
+            <div class="fotoP" onclick="mostrarDescripcion('ivy')" >
+                <div class="circle-container">
+                    <div class="portal"><img src="img/images-5.jpeg" alt="ivy"></div>
+                </div>
+                <div class="name">ivy</div>
+            </div>
+    
+            <div class="fotoP" onclick="mostrarDescripcion('dorota')" >
+                <div class="circle-container">
+                    <div class="portal"><img src="img/42d5be05d4004ea38bed04e08b079612_xl.jpg.webp" alt="dorota"></div>
+                </div>
+                <div class="name">dorota</div>
+            </div>
+    
+            <div class="fotoP" onclick="mostrarDescripcion('carter')" >
+                <div class="circle-container">
+                    <div class="portal"><img src="img/08c483tu2mr51.jpg.webp" alt="carter"></div>
+                </div>
+                <div class="name">carter</div>
+            </div>
+    
+            <div class="fotoP" onclick="mostrarDescripcion('juliet')" >
+                <div class="circle-container">
+                    <div class="portal"><img src="img/images-6.jpeg" alt="juliet"></div>
+                </div>
+                <div class="name">juliet</div>
+            </div>
+    
+          
+        </div>
+        <div class="header-content">
+            <img class="besoF" src="./img/beso.png" alt="">
+            <div class="title">cast</div>
+            <div class="subtitle">Take a glance at the true originals who paved the way.</div>
+        </div>
+    </div>
+    <div class="cont">
+        <div class="linea-dorada"></div>
+    </div>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="img/XOXO.png" alt="XOXO Logo"> 
+            </div>
+            <div class="footer-text">
+                <p>Esta es una página de fans no oficial. <em>Gossip Girl</em> es una marca registrada de Warner Bros. y otras compañías. Todos los derechos reservados.</p>
+            </div>
+            <ul class="footer-links">
+                <li><a href="index.php">Inicio</a></li> <!-- Ruta corregida -->
+                <li><a href="personajes.html">Personajes</a></li> <!-- Ruta corregida -->
+                <li><a href="episodios.html">Episodios</a></li> <!-- Ruta corregida -->
+                <li><a href="galeria.html">Galería</a></li> <!-- Ruta corregida -->
+                <li><a href="mapa.html">Mapa</a></li> <!-- Ruta corregida -->
+                <li><a href="#">Contacto</a></li>
+            </ul>
+            <div class="footer-social">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+    
+    
+    <script src="js/personajes.js"></script>
+</body>
+</html>

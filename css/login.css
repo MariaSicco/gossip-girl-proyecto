@@ -1,0 +1,98 @@
+.container{
+    width: 80%;
+    margin-top: 20px;
+    align-content: center;
+}
+h2{
+    font-size: 36px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    font-family: 'Marcellus SC', serif;
+    font-weight: 500;
+    color: #f9e4b7;
+}
+.auth-form {
+    max-width: 500px;
+    margin: 50px auto;
+    background-color: #1a1a1acd;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.auth-form h2 {
+    font-family: "Marcellus SC", serif;
+    font-size: 30px;
+    color: #f8e7b9;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    font-family: "Marcellus", serif;
+    font-size: 16px;
+    color: #dfd6c5;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.input-group input, .input-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #dfd6c5;
+    border-radius: 5px;
+    background-color: #1c1c1c;
+    color: #fff;
+    font-size: 16px;
+}
+
+.input-group input:focus, .input-group select:focus {
+    outline: none;
+    border-color: #d1aa5b;
+}
+
+.form-text {
+    text-align: center;
+    font-family: "Marcellus", serif;
+    color: #dfd6c5;
+    margin-top: 15px;
+}
+
+.form-text a {
+    color: #d1aa5b;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.form-text a:hover {
+    color: #f8e7b9;
+}
+
+input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+/* Botón de Registro */
+.custom-button {
+    text-decoration: none;
+    background: linear-gradient(200deg, #d1aa5b, #dfd6c5);
+    border: none;
+    color: #000;
+    padding: 15px 40px;
+    font-size: 13px;
+    width: 100%;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    margin-top: 20px;
+}
+
+.m-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 15px rgba(223, 208, 174, 0.6);
+    background: linear-gradient(145deg, #f9e4b7, #ffe9c7);
+}
