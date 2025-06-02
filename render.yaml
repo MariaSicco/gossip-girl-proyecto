@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: gossip-girl-proyecto
+    env: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    autoDeploy: true
